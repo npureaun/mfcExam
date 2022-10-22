@@ -1,4 +1,5 @@
-﻿
+﻿#include "CDlgimage.h"
+#include <iostream>
 // mfcprtDlg.h: 헤더 파일
 //
 
@@ -9,8 +10,10 @@
 class CmfcprtDlg : public CDialogEx
 {
 // 생성입니다.
+	CDlgimage* m_pDlgimage = NULL;
 public:
 	CmfcprtDlg(CWnd* pParent = nullptr);	// 표준 생성자입니다.
+
 
 // 대화 상자 데이터입니다.
 #ifdef AFX_DESIGN_TIME
@@ -33,4 +36,9 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnBnClickedButton1();
+	afx_msg void OnDestroy();
+
+	void callfunc(int n) {
+		std::cout << n << std::endl;
+	}
 };
