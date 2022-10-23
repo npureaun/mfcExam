@@ -11,6 +11,7 @@ class CmfcprtDlg : public CDialogEx
 {
 // 생성입니다.
 	CDlgimage* m_pDlgimage = NULL;
+	CDlgimage* m_pDlgimageResult = NULL;
 public:
 	CmfcprtDlg(CWnd* pParent = nullptr);	// 표준 생성자입니다.
 
@@ -35,10 +36,10 @@ protected:
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
 public:
-	afx_msg void OnBnClickedButton1();
 	afx_msg void OnDestroy();
 
 	void callfunc(int n) {
 		std::cout << n << std::endl;
 	}
+	afx_msg void OnBnClickedButtontest();
 };
